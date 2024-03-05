@@ -1,0 +1,572 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Form1..create
+gui.SS_Form1..caption("GCG_Customer_Performace_BRI")
+gui.SS_Form1..size(5020,3135)
+gui.SS_Form1..position(0,0)
+gui.SS_Form1..event(unload,unload)
+gui.SS_Form1..alwaysontop(False)
+gui.SS_Form1..fontname("Arial")
+gui.SS_Form1..fontsize(8)
+gui.SS_Form1..forecolor(0)
+gui.SS_Form1..fontstyle(,,,,)
+gui.SS_Form1..BackColor(-2147483633)
+gui.SS_Form1..controlbox(True)
+gui.SS_Form1..maxbutton(False)
+gui.SS_Form1..minbutton(False)
+gui.SS_Form1..mousepointer(0)
+gui.SS_Form1..moveable(True)
+gui.SS_Form1..sizeable(False)
+gui.SS_Form1..ShowInTaskBar(True)
+gui.SS_Form1..titlebar(True)
+gui.SS_Form1.lbl_txtBegCust.create(label,"Beginning Customer",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtBegCust.create(textbox,"",True,1800,330,1,100,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.cmd_txtBegCust.create(button)
+gui.SS_Form1.cmd_txtBegCust.caption("^")
+gui.SS_Form1.cmd_txtBegCust.visible(True)
+gui.SS_Form1.cmd_txtBegCust.size(330,330)
+gui.SS_Form1.cmd_txtBegCust.zorder(0)
+gui.SS_Form1.cmd_txtBegCust.position(1985,335)
+gui.SS_Form1.cmd_txtBegCust.enabled(True)
+gui.SS_Form1.cmd_txtBegCust.fontname("Arial")
+gui.SS_Form1.cmd_txtBegCust.fontsize(8)
+gui.SS_Form1.cmd_txtBegCust.event(click,cmd_txtCust_click)
+gui.SS_Form1.lbl_txtEndCust.create(label,"Ending Customer",True,1800,200,1,2455,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtEndCust.create(textbox,"",True,1800,330,1,2455,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.cmd_txtEndCust.create(button)
+gui.SS_Form1.cmd_txtEndCust.caption("^")
+gui.SS_Form1.cmd_txtEndCust.visible(True)
+gui.SS_Form1.cmd_txtEndCust.size(330,330)
+gui.SS_Form1.cmd_txtEndCust.zorder(0)
+gui.SS_Form1.cmd_txtEndCust.position(4340,335)
+gui.SS_Form1.cmd_txtEndCust.enabled(True)
+gui.SS_Form1.cmd_txtEndCust.fontname("Arial")
+gui.SS_Form1.cmd_txtEndCust.fontsize(8)
+gui.SS_Form1.cmd_txtEndCust.event(click,cmd_txtCust_click)
+gui.SS_Form1.chkAllCust.create(checkbox)
+gui.SS_Form1.chkAllCust.caption("All Customers")
+gui.SS_Form1.chkAllCust.visible(True)
+gui.SS_Form1.chkAllCust.size(1800,300)
+gui.SS_Form1.chkAllCust.zorder(0)
+gui.SS_Form1.chkAllCust.position(100,670)
+gui.SS_Form1.chkAllCust.enabled(True)
+gui.SS_Form1.chkAllCust.fontname("Arial")
+gui.SS_Form1.chkAllCust.fontsize(8)
+gui.SS_Form1.lbl_dtpBegDate.create(label,"Beginning Date",True,1800,200,1,100,1140,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.dtpBegDate.create(datepicker)
+gui.SS_Form1.dtpBegDate.visible(True)
+gui.SS_Form1.dtpBegDate.size(1800,345)
+gui.SS_Form1.dtpBegDate.zorder(0)
+gui.SS_Form1.dtpBegDate.position(100,1340)
+gui.SS_Form1.dtpBegDate.enabled(True)
+gui.SS_Form1.dtpBegDate.checkbox(False)
+gui.SS_Form1.lbl_dtpEndDate.create(label,"Ending Date",True,1800,200,1,1985,1140,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.dtpEndDate.create(datepicker)
+gui.SS_Form1.dtpEndDate.visible(True)
+gui.SS_Form1.dtpEndDate.size(1800,345)
+gui.SS_Form1.dtpEndDate.zorder(0)
+gui.SS_Form1.dtpEndDate.position(1985,1340)
+gui.SS_Form1.dtpEndDate.enabled(True)
+gui.SS_Form1.dtpEndDate.checkbox(False)
+gui.SS_Form1.chkAllDates.create(checkbox)
+gui.SS_Form1.chkAllDates.caption("All Dates")
+gui.SS_Form1.chkAllDates.visible(True)
+gui.SS_Form1.chkAllDates.size(1800,300)
+gui.SS_Form1.chkAllDates.zorder(0)
+gui.SS_Form1.chkAllDates.position(100,1690)
+gui.SS_Form1.chkAllDates.enabled(True)
+gui.SS_Form1.chkAllDates.fontname("Arial")
+gui.SS_Form1.chkAllDates.fontsize(8)
+gui.SS_Form1.cmdOk.create(button)
+gui.SS_Form1.cmdOk.caption("Ok")
+gui.SS_Form1.cmdOk.visible(True)
+gui.SS_Form1.cmdOk.size(1000,360)
+gui.SS_Form1.cmdOk.zorder(0)
+gui.SS_Form1.cmdOk.position(100,2160)
+gui.SS_Form1.cmdOk.enabled(True)
+gui.SS_Form1.cmdOk.fontname("Arial")
+gui.SS_Form1.cmdOk.fontsize(8)
+gui.SS_Form1.cmdOk.event(click,cmdok_click)
+gui.SS_Form1.txtBegCust.tabstop(true)
+gui.SS_Form1.txtBegCust.tabindex(1)
+gui.SS_Form1.cmd_txtBegCust.tabstop(true)
+gui.SS_Form1.cmd_txtBegCust.tabindex(2)
+gui.SS_Form1.txtEndCust.tabstop(true)
+gui.SS_Form1.txtEndCust.tabindex(3)
+gui.SS_Form1.cmd_txtEndCust.tabstop(true)
+gui.SS_Form1.cmd_txtEndCust.tabindex(4)
+gui.SS_Form1.dtpBegDate.tabstop(true)
+gui.SS_Form1.dtpBegDate.tabindex(5)
+gui.SS_Form1.dtpEndDate.tabstop(true)
+gui.SS_Form1.dtpEndDate.tabindex(6)
+gui.SS_Form1.cmdOk.tabstop(true)
+gui.SS_Form1.cmdOk.tabindex(7)
+
+
+gui.Form2..create
+gui.Form2..caption("")
+gui.Form2..size(2610,1320)
+gui.Form2..position(0,0)
+gui.Form2..alwaysontop(False)
+gui.Form2..fontname("Arial")
+gui.Form2..fontsize(8)
+gui.Form2..forecolor(0)
+gui.Form2..fontstyle(,,,,)
+gui.Form2..BackColor(-2147483633)
+gui.Form2..controlbox(True)
+gui.Form2..maxbutton(True)
+gui.Form2..minbutton(True)
+gui.Form2..mousepointer(0)
+gui.Form2..moveable(True)
+gui.Form2..sizeable(True)
+gui.Form2..ShowInTaskBar(True)
+gui.Form2..titlebar(True)
+gui.Form2.lbl1.create(label,"Printing Customer Performance Report",True,2025,510,1,200,200,True,2,Arial,10,-2147483633,0)
+gui.Form2.lbl1.fontstyle(True,False,False,False)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.Lines.Define("Trmnl",String)
+Variable.UDT.Lines.Define("Customer",String,Customer)
+Variable.UDT.Lines.Define("Order_No",String,Order_No)
+Variable.UDT.Lines.Define("Order_Line",String,Order_Line)
+Variable.UDT.Lines.Define("Part",String,Part)
+Variable.UDT.Lines.Define("Date_Order",Date,Date_Order)
+Variable.UDT.Lines.Define("Date_Order_Due",Date,Date_Order_Due)
+Variable.UDT.Lines.Define("Date_Shipped",Date,Date_Shipped)
+Variable.UDT.Lines.Define("Qty_Ordered",Float,"Qty_Ordered")
+Variable.UDT.Lines.Define("Exension",Float,"Extension")
+Variable.UDT.Lines.Define("Days",Long)
+Variable.UDT.Lines.Define("Group1",String)
+Variable.UDT.Lines.Define("Month",Long)
+Variable.uGlobal.uLines.Declare("Lines")
+
+Variable.UDT.Rpt.Define("Cat",String,Cat)
+Variable.UDT.Rpt.Define("Customer",String,Customer)
+Variable.UDT.Rpt.Define("Trmnl",String,Trmnl)
+Variable.UDT.Rpt.Define("Jan",Long,Jan)
+Variable.UDT.Rpt.Define("Feb",Long,Feb)
+Variable.UDT.Rpt.Define("Mar",Long,Mar)
+Variable.UDT.Rpt.Define("Apr",Long,Apr)
+Variable.UDT.Rpt.Define("May",Long,May)
+Variable.UDT.Rpt.Define("Jun",Long,Jun)
+Variable.UDT.Rpt.Define("Jul",Long,Jul)
+Variable.UDT.Rpt.Define("Aug",Long,Aug)
+Variable.UDT.Rpt.Define("Sep",Long,Sep)
+Variable.UDT.Rpt.Define("Oct",Long,Oct)
+Variable.UDT.Rpt.Define("Nov",Long,Nov)
+Variable.UDT.Rpt.Define("Dec",Long,Dec)
+Variable.uGlobal.uRpt.Declare("Rpt")
+
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+F.ODBC.Connection!Con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,500)
+
+V.uGlobal.uLines.Redim(-1,-1)
+V.uGlobal.uRpt.Redim(-1,-1)
+Gui.SS_Form1..Show
+
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+
+F.ODBC.Connection!Con.Close
+f.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+program.sub.cmd_txtCust_click.start
+
+V.Local.sRet.Declare(String)
+
+f.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.CommonBrowser(205,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'if control is beg cust, set selected cust to beg cust text field
+		F.Intrinsic.Control.If(V.Args.CONTROLNAME,=,"CMD_TXTBEGCUST")
+			Gui.SS_Form1.txtBegCust.Text(V.Local.sRet(0))
+	'if ending customer not selected, default ending customer to beginning cust value for a valid range
+			F.Intrinsic.Control.If(V.Screen.SS_Form1!txtEndCust.Text,=,"")
+				Gui.SS_Form1.txtEndCust.Text(V.Local.sRet(0))
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+'if control is end cust, set selected cust to ending cust text field
+			Gui.SS_Form1.txtEndCust.Text(V.Local.sRet(0))
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+program.sub.cmd_txtCust_click.end
+
+program.sub.cmdok_click.start
+
+Gui.SS_Form1..Visible(false)
+Gui.Form2..Show
+
+F.Intrinsic.Control.CallSub(Collectdata)
+F.Intrinsic.Control.CallSub(Sortdata)
+F.Intrinsic.Control.CallSub(Supplementaltable)
+
+F.Intrinsic.Control.CallSub(Printreport)
+F.Intrinsic.Control.CallSub(Unload)
+
+program.sub.cmdok_click.end
+
+Program.Sub.PrintReport.Start
+
+
+V.Local.sRptLoc.Declare(String)
+V.Local.iRptId.Declare(Long)
+V.Local.sParams.Declare(String)
+V.Local.sValues.Declare(String)
+
+F.Intrinsic.String.Concat(V.Caller.BusintDir,"\Custom\GCG_Cust_Performance_BRI.rpt",V.Local.sRptLoc)
+F.Global.BI.InitializeReport("GCG_Cust_Performance_BRI.rpt",V.Local.sRptLoc,V.Local.iRptId)
+V.Local.sParams.Set("Trmnl")
+V.Local.sValues.Set(V.Caller.Terminal)
+
+F.Global.BI.PrintReport(V.Local.iRptId,0,V.Local.sParams,V.Local.sValues,"",False)
+
+Program.Sub.PrintReport.End
+
+Program.Sub.CollectData.Start
+
+
+V.Local.iFor.Declare(Long)
+V.Local.sSel.Declare(String)
+V.Local.sBegDate.Declare(String)
+V.Local.sEndDate.Declare(String)
+V.Local.sRet.Declare(String)
+
+'clear existing data
+F.Intrinsic.String.Concat("Delete from GCG_3245_CustPerfBRI where Trmnl='",V.Caller.Terminal,"'",V.Local.sSel)
+F.ODBC.Connection!Con.Execute(V.Local.sSel)
+
+
+'format dates as strings for data selection from the tables
+F.Intrinsic.String.Format(V.Screen.SS_Form1!dtpBegDate.Value,"YYYY-MM-DD",V.Local.sBegDate)
+F.Intrinsic.String.Format(V.Screen.SS_Form1!dtpEndDate.Value,"YYYY-MM-DD",V.Local.sEndDate)
+
+'get detail information, minus shipping
+F.Intrinsic.String.Concat("select Customer,Order_No,Order_Line, Part,Date_Order,Date_Due as Date_Order_Due,Date_Shipped,Qty_Ordered,Extension from V_Order_Hist_Line where Order_Line<>'8000' and ","",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," (",V.Screen.SS_Form1!chkAllCust.Value,"=1 or Customer between'",V.Screen.SS_Form1!txtBegCust.Text,"' and '",V.Screen.SS_Form1!txtEndCust.Text,"') and ",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," (",V.Screen.SS_Form1!chkAllDates.Value,"=1 or Date_Due between'",V.Local.sBegDate,"' and '",V.Local.sEndDate,"')",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel,"order by Order_No,Order_Line","",V.Local.sSel)
+F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstSel.EOF,=,False)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstsel","v.uGlobal.uLines",False,1)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstSel.Close
+
+''get detail information, minus shipping
+'F.Intrinsic.String.Concat("select Customer,Order_No,Order_Line, Part,Date_Order,Date_Order_Due,Date_Shipped,Qty_Ordered,Extension from V_Order_Hist_Line where Order_Line<>'8000' ","",V.Local.sSel)
+'F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+'	F.Intrinsic.Control.If(V.ODBC.Con!rstSel.EOF,=,False)
+'		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstsel","v.uGlobal.uLines",False,1)
+'	F.Intrinsic.Control.EndIf
+'F.ODBC.Con!rstSel.Close
+'
+'
+''if all customers was not selected
+'F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllCust.Value,<>,1)
+''flag all lines
+'	F.Intrinsic.Variable.UDTFlagAll(V.uGlobal.uLines)
+''for each line
+'	F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uLines!Customer.LBound,V.uGlobal.uLines!Customer.UBound,1)
+'	'unflag if customer is within range entered
+'		F.Intrinsic.Control.If(V.uGlobal.uLines(v.Local.iFor)!Customer,>=,"")
+'		F.Intrinsic.Control.AndIf(V.uGlobal.uLines(v.Local.iFor)!Customer,<=,"")
+'			F.Intrinsic.Variable.UDTMultiUnFlag(V.uGlobal.uLines!Customer,V.uGlobal.uLines(v.Local.iFor)!Customer)
+'		F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.Next(V.Local.iFor)
+''delete lines left flagged
+'	F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uLines)
+'F.Intrinsic.Control.Endif
+'
+'F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllDates.Value,<>,1)
+''flag all lines
+'	F.Intrinsic.Variable.UDTFlagAll(V.uGlobal.uLines)
+''for each line
+'	F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uLines!Customer.LBound,V.uGlobal.uLines!Customer.UBound,1)
+'		F.Intrinsic.Control.If(V.uGlobal.uLines(v.Local.iFor)!Date_Order,>=,"")
+'		F.Intrinsic.Control.AndIf(V.uGlobal.uLines(v.Local.iFor)!Date_Order,<=,"")
+'			F.Intrinsic.Variable.UDTMultiUnFlag(V.uGlobal.uLines!Customer,V.uGlobal.uLines(v.Local.iFor)!Customer)
+'		F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.Next(V.Local.iFor)
+''delete lines left flagged
+'	F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uLines)
+'F.Intrinsic.Control.Endif
+
+'if Header records are not found, display message
+F.Intrinsic.Control.If(V.uGlobal.uLines!Customer.UBound,=,-1)
+	F.Intrinsic.UI.Msgbox("No data found in range entered.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+Program.Sub.CollectData.End
+
+Program.Sub.SortData.Start
+
+V.Local.iFor.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.dDate.Declare(Date)
+V.Local.iRet.Declare(Long)
+V.Local.sSel.Declare(String)
+V.Local.iYear.Declare(Long)
+
+
+'for each line, break out Days early/late
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uLines!Order_No.LBound,V.uGlobal.uLines!Order_No.UBound,1)
+	F.Intrinsic.Date.Year(V.uGlobal.uLines(v.Local.iFor)!Date_Order_Due,V.Local.iYear)
+	F.Intrinsic.Date.Month(V.uGlobal.uLines(v.Local.iFor)!Date_Order_Due,V.uGlobal.uLines(v.Local.iFor)!Month)
+	F.Intrinsic.Control.If(V.Local.iYear,=,1900)
+		F.Intrinsic.Date.DateDiff("D",V.uGlobal.uLines(v.Local.iFor)!Date_Order_Due,V.Ambient.Date,V.Local.iRet)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Date.DateDiff("D",V.uGlobal.uLines(v.Local.iFor)!Date_Order_Due,V.uGlobal.uLines(v.Local.iFor)!Date_Shipped,V.Local.iRet)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.iRet,<=,-2)
+		V.uGlobal.uLines(v.Local.iFor)!Group1.Set("<-2")
+	F.Intrinsic.Control.ElseIf(V.Local.iRet,<=,2)
+		V.uGlobal.uLines(v.Local.iFor)!Group1.Set("-2 to 2")
+	F.Intrinsic.Control.ElseIf(V.Local.iRet,<=,8)
+		V.uGlobal.uLines(v.Local.iFor)!Group1.Set("3 to 8")
+	F.Intrinsic.Control.ElseIf(V.Local.iRet,<=,15)
+		V.uGlobal.uLines(v.Local.iFor)!Group1.Set("9 - 15")
+	F.Intrinsic.Control.Else
+		V.uGlobal.uLines(v.Local.iFor)!Group1.Set(">15")
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uLines!Trmnl,V.Caller.Terminal)
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLines!Trmnl,"Trmnl")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLines!Days,"Days")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLines!Group1,"Group1")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLines!Month,"Month")
+
+F.Intrinsic.String.Concat("select * from GCG_3245_CustPerfBRI where Trmnl='",V.Caller.Terminal,"'",V.Local.sSel)
+F.ODBC.Connection!Con.OpenRecordsetRW("rstSel",V.Local.sSel)
+	F.Intrinsic.Variable.SaveUDTToRecordset("Con","rstSel","v.uGlobal.uLines")
+F.ODBC.Con!rstSel.Close
+
+Program.Sub.SortData.End
+
+Program.Sub.SupplementalTable.Start
+
+
+V.Local.sSel.Declare(String)
+V.Local.iFor.Declare(Long)
+'V.Local.iCat1.Declare(Long)
+'V.Local.iCat2.Declare(Long)
+'V.Local.iCat3.Declare(Long)
+'V.Local.iCat4.Declare(Long)
+'V.Local.iCat5.Declare(Long)
+'V.Local.iCount.Declare(Long)
+'
+'get ditinct customers
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(V.uGlobal.uLines!Customer)
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uLines)
+
+'clear table
+F.Intrinsic.String.Concat("delete from GCG_3245_CustPerfTBR where Trmnl='",V.Caller.Terminal,"'",V.Local.sSel)
+F.ODBC.Connection!Con.Execute(V.Local.sSel)
+
+'for each vendor
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uLines!Customer.LBound,V.uGlobal.uLines!Customer.UBound,1)
+'redim the report udt
+	V.uGlobal.uRpt.Redim(0,4)
+	V.uGlobal.uRpt(0)!Cat.Set("<-2")
+	V.uGlobal.uRpt(1)!Cat.Set("-2 to 2")
+	V.uGlobal.uRpt(2)!Cat.Set("3 to 8")
+	V.uGlobal.uRpt(3)!Cat.Set("9 - 15")
+	V.uGlobal.uRpt(4)!Cat.Set(">15")
+
+'reset the total
+'	V.Local.iCat1.Set(0)
+
+	F.Intrinsic.String.Concat("select Customer, month, count(Group1) as Group1 from GCG_3245_CustPerfBRI where Trmnl ='",V.Caller.Terminal,"' and group1='<-2' and Customer='",V.uGlobal.uLines(v.Local.iFor)!Customer,"' group by Customer, month",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstSel.EOF,=,True)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstSel.FieldValTrim!Month,=,1)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Jan,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Jan)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,2)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Feb,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Feb)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,3)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Mar,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Mar)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,4)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Apr,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Apr)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,5)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!May,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!May)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,6)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Jun,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Jun)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,7)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Jul,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Jul)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,8)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Aug,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Aug)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,9)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Sep,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Sep)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,10)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Oct,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Oct)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,11)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Nov,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Nov)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,12)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(0)!Dec,V.ODBC.Con!rstSel.FieldVal!Group1,V.uGlobal.uRpt(0)!Dec)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstSel.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstSel.Close
+
+	F.Intrinsic.String.Concat("select Customer, month, count(Group1) as Group2 from GCG_3245_CustPerfBRI where Trmnl ='",V.Caller.Terminal,"' and  Group1='-2 to 2' and Customer='",V.uGlobal.uLines(v.Local.iFor)!Customer,"' group by Customer, month",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstSel.EOF,=,True)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstSel.FieldValTrim!Month,=,1)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Jan,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Jan)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,2)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Feb,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Feb)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,3)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Mar,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Mar)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,4)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Apr,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Apr)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,5)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!May,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!May)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,6)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Jun,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Jun)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,7)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Jul,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Jul)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,8)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Aug,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Aug)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,9)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Sep,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Sep)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,10)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Oct,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Oct)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,11)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Nov,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Nov)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,12)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(1)!Dec,V.ODBC.Con!rstSel.FieldVal!Group2,V.uGlobal.uRpt(1)!Dec)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstSel.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstSel.Close
+
+	F.Intrinsic.String.Concat("select Customer, month, count(Group1) as Group3 from GCG_3245_CustPerfBRI where Trmnl ='",V.Caller.Terminal,"' and  Group1='3 to 8' and Customer='",V.uGlobal.uLines(v.Local.iFor)!Customer,"' group by Customer, month",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstSel.EOF,=,True)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstSel.FieldValTrim!Month,=,1)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Jan,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Jan)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,2)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Feb,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Feb)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,3)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Mar,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Mar)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,4)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Apr,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Apr)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,5)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!May,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!May)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,6)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Jun,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Jun)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,7)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Jul,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Jul)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,8)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Aug,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Aug)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,9)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Sep,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Sep)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,10)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Oct,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Oct)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,11)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Nov,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Nov)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,12)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(2)!Dec,V.ODBC.Con!rstSel.FieldVal!Group3,V.uGlobal.uRpt(2)!Dec)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstSel.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstSel.Close
+
+	F.Intrinsic.String.Concat("select Customer, month, count(Group1) as Group4 from GCG_3245_CustPerfBRI where Trmnl ='",V.Caller.Terminal,"' and  Group1='9 - 15' and Customer='",V.uGlobal.uLines(v.Local.iFor)!Customer,"' group by Customer, month",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstSel.EOF,=,True)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstSel.FieldValTrim!Month,=,1)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Jan,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Jan)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,2)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Feb,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Feb)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,3)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Mar,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Mar)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,4)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Apr,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Apr)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,5)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!May,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!May)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,6)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Jun,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Jun)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,7)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Jul,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Jul)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,8)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Aug,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Aug)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,9)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Sep,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Sep)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,10)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Oct,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Oct)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,11)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Nov,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Nov)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,12)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(3)!Dec,V.ODBC.Con!rstSel.FieldVal!Group4,V.uGlobal.uRpt(3)!Dec)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstSel.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstSel.Close
+
+	F.Intrinsic.String.Concat("select Customer, month, count(Group1) as Group5 from GCG_3245_CustPerfBRI where Trmnl ='",V.Caller.Terminal,"' and  Group1='>15' and Customer='",V.uGlobal.uLines(v.Local.iFor)!Customer,"' group by Customer, month",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstSel",V.Local.sSel)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstSel.EOF,=,True)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstSel.FieldValTrim!Month,=,1)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Jan,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Jan)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,2)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Feb,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Feb)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,3)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Mar,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Mar)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,4)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Apr,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Apr)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,5)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!May,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!May)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,6)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Jun,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Jun)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,7)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Jul,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Jul)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,8)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Aug,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Aug)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,9)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Sep,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Sep)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,10)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Oct,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Oct)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,11)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Nov,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Nov)
+			F.Intrinsic.Control.ElseIf(V.ODBC.Con!rstSel.FieldValTrim!Month,=,12)
+				F.Intrinsic.Math.Add(V.uGlobal.uRpt(4)!Dec,V.ODBC.Con!rstSel.FieldVal!Group5,V.uGlobal.uRpt(4)!Dec)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstSel.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstSel.Close
+
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRpt!Trmnl,V.Caller.Terminal)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRpt!Customer,V.uGlobal.uLines(v.Local.iFor)!Customer)
+	'load the data to the table
+	F.Intrinsic.String.Concat("select * from GCG_3245_CustPerfTBR where Trmnl='",V.Caller.Terminal,"'",V.Local.sSel)
+	F.ODBC.Connection!Con.OpenRecordsetRW("rstSel",V.Local.sSel)
+		F.Intrinsic.Variable.SaveUDTToRecordset("Con","rstSel","V.uGlobal.uRpt")
+	F.ODBC.Con!rstSel.Close
+
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+
+
+Program.Sub.SupplementalTable.End
+
+
